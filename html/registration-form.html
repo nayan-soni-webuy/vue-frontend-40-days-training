@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+
+    <!-- css link -->
+     <link rel="stylesheet" href="registration-form.css">
+</head>
+<body>
+
+    <!-- this is main content -->
+    <main>
+
+        <!-- will create modal later... for now section -->
+         <section aria-labelledby="signup-title">
+
+            <!-- top left heading, right close btn -->
+             <div class="signup-top">
+                <h1 id="signup-title">Sign Up</h1>
+
+                <button type="button">close</button>
+             </div>
+
+             <p>
+                Already have an account? <a href="#">Login here</a>
+             </p>
+
+             <!-- action # update later fon backend -->
+             <form action="#" method="get">
+
+                <!-- row 1: first name and last name  -->
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="firstName" placeholder="First Name" minlength="2" maxlength="20" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="lastName" placeholder="Last Name" min="2" maxlength="20" required>
+                    </div>
+
+                </div>
+
+                <!-- row 2: email and password  -->
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" placeholder="Email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password" minlength="6" maxlength="12" required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="contact-number">Contact Number (optional)</label>
+
+                    <div class="phone-field">
+                        <!-- country ke codes -->
+                         <select name="countryCode" id="country-code" aria-label="country code">
+                            <option value=""selected>CC##</option>
+                            <option value="+44">+44 (UK)</option>
+                            <option value="+91">+91 (India)</option>
+                            <option value="+1">+1 (USA)</option>
+                         </select>
+
+                         <input type="tel" name="contactNumber" id="contact-number" placeholder="0000000" pattern="[0-9]{7,15}" maxlength="15">
+                    </div>
+
+                </div>
+
+                <!-- teen checkboxex banane hai 3rd wala required -->
+                 <div class="checkbox-group">
+                    <input type="checkbox" id="email-updates" name="emailUpdates">
+                    <label for="email-updates">Keep me upto date via email.</label>
+                 </div>
+
+                 <div class="checkbox-group">
+                    <input type="checkbox" id="sms-updates" name="smsUpdates">
+                    <label for="sms-updates">Keep me upto date via sms.</label>
+                 </div>
+
+                 <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I confirm that i am 13 years of age of older and i accept the <a href="#">Terms &amp; Conditions</a> ands <a href="#">Privacy Policy</a>.</label>
+                 </div>
+
+                 <button type="submit">Create Account</button>
+
+             </form>
+
+         </section>
+
+    </main>
+    
+
+</body>
+</html>      
+
+
+
+<!-- done day 2 -->
