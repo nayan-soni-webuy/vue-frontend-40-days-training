@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CeX (MY Account)</title>
+
+     <!-- add poppins font link -->
+     <link rel="stylesheet" href="main.css">
+    <!-- header css -->
+    <link rel="stylesheet" href="header.css">
+    <!-- account css  -->
+     <link rel="stylesheet" href="account.css">
+
+</head>
+<body>
+    <!-- ################# Header Container #######################  -->
+     <div id="header-container">
+
+     </div>
+
+     <!--######################## header aur footer ke beech ka main content ############################### -->
+     <main class="main-container">
+        
+        <!-- breadcrumb  home > My Account -->
+         <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="#">Home</a></li>
+                <li aria-current="page">My Account</li>
+            </ol>
+         </nav>
+
+         <!-- two column content layout -> left sidebar (30% width), right main content (70% width) -->
+          <div class="account-layout">
+
+            <!--^^^^^^^^^^^^^^^^ left -> sidebar start ^^^^^^^^^^^^^^^^-->
+             <aside class="account-sidebar">
+
+                <div class="sidebar-user">
+                    <h2>Hi, User</h2>
+                    <p><strong>Account Number:</strong><br>0000 0000 0000 0000 00</p>    
+                </div>
+
+                <nav aria-label="Account menu">
+
+                    <!-- ^^^^^^^^^^^^^ group 1 - icon wale links ^^^^^^^^^^^^^ -->
+                     <ul class="menu-group icon-links">
+                        <li>
+                            <button type="button" class="tab-link" data-tab="purchases"> <!--data-tab ka value right side panel ki id se match krenge using js -->
+                                <span class="icon" aria-hidden="true"></span>
+                                Your Purchases
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-link" data-tab="sales">
+                                <span class="icon" aria-hidden="true"></span>
+                                Your Sales
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-link" data-tab="favourites">
+                                <span class="icon" aria-hidden="true"></span>
+                                Favourites
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-link" data-tab="recent">
+                                <span class="icon" aria-hidden="true"></span>
+                                Recently Viewed
+                            </button>
+                        </li>
+                     </ul>
+
+                     <!-- ^^^^^^^^^^^^^ group 2 ^^^^^^^^^^^^^ -->
+                     <ul class="menu-group">
+                        <!-- your profile by default khulega isley aria-current true rakha h -->
+                         <li>
+                            <button type="button" class="tab-link" data-tab="profile" aria-current="true">Your Profile</button>
+                         </li>
+                         <li>
+                            <button type="button" class="tab-link" data-tab="addresses">Your Addresses</button>
+                         </li>
+                     </ul>
+
+                     <!-- ^^^^^^^^^^^^^ group 3 ^^^^^^^^^^^^^ -->
+                      <ul class="menu-group">
+                        <li>
+                            <button type="button" class="tab-link" data-tab="membership-card">Your Membership Card</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-link" data-tab="membership-abilities">Membership Abiloties</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-link" data-tab="alerts">Your Alerts</button>
+                        </li>
+                      </ul>
+
+                      <!-- ^^^^^^^^^^^^^ group 4 ^^^^^^^^^^^^^ -->
+                       <ul class="menu-group">
+                        <li>
+                            <button type="button" class="tab-link" data-tab="messages">Message Centere</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-link" data-tab="payment-cards">Your Saved Payement Cards</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-link" data-tab="bank-details">Your Bank Details</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-link" data-tab="paypal">Your Paypal Account Email</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-link" data-tab="cancel-account">Cancel My Account</button>
+                        </li>
+                        <!-- logout se koi panel ni kholenge isley no button designed  -->
+                        <li><a href="#" class="tab-link">Logout!</a></li>
+                       </ul>
+
+                </nav>
+
+             </aside>  <!--^^^^^^^^^^^^^^^^ end of sidebar ^^^^^^^^^^^^^^^^--> 
+
+             <!--^^^^^^^^^^^^^^^^ right side -> (multiple)content panels  ^^^^^^^^^^^^^^^^-->
+              <div class="account-content">
+                <!-- ek time pe ik panel dikhayenge baki ke hidden se chupa denge -->
+                <section id="panel-profile" class="tab-panel">
+                    <h1>Your Profile</h1>
+                    <!-- todo- dya 1 ka profile page yaha link krna h -->
+                     <p>day 1 -profile page yaha link krna h later...</p>
+                </section>
+
+                <section id="panel-purchases" class="tab-panel" hidden>
+                    <h1>Your Purchases</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+
+                <section id="panel-sales" class="tab-panel" hidden>
+                    <h1>Your Sales</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+
+                <section id="panel-favourites" class="tab-panel" hidden>
+                    <h1>Favourites</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+
+                <section id="panel-recent" class="tab-panel" hidden>
+                    <h1>Recently Viewed</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+
+                <section id="panel-addresses" class="tab-panel" hidden>
+                    <h1>Your Addresses</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+
+                <section id="panel-membership-card" class="tab-panel" hidden>
+                    <h1>Your Membership Card</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+
+                <section id="panel-membership-abilities" class="tab-panel" hidden>
+                    <h1>Membership Abilities</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+
+                <section id="panel-alerts" class="tab-panel" hidden>
+                    <h1>Your Alerts</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+
+                <section id="panel-messages" class="tab-panel" hidden>
+                    <h1>Message Centre</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+
+                <section id="panel-payment-cards" class="tab-panel" hidden>
+                    <h1>Your Saved Payment Cards</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+
+                <section id="panel-bank-details" class="tab-panel" hidden>
+                    <h1>Your Bank Details</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+
+                <section id="panel-paypal" class="tab-panel" hidden>
+                    <h1>Your Paypal Accound Email</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+
+                <section id="panel-cancel-account" class="tab-panel" hidden>
+                    <h1>Cancel My Account</h1>
+                    <p>ohh crumbs!! content baad me aayega...</p>
+                </section>
+              </div>
+
+          </div>
+
+
+     </main>
+
+
+    <!-- ##################### Footer Container ##########################  -->
+     <div id="footer-container">
+
+     </div>
+
+     <!-- script to add header.html -->
+    <script src="main.js"></script>
+
+    <!-- script for dynamic two column content layout -> right panels  -->
+    <script src="account.js"></script>
+
+</body>
+</html>

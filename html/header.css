@@ -1,0 +1,239 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* ############33 header and sidebar links ################*/
+.site-header a,
+.sidebar a {
+    text-decoration: none;
+}
+
+/* ########## header ############### */
+.site-header {
+    background-color: #e4141b;
+    color: #fff;
+}
+
+/* main row: align all in one line flex box  */
+.header-main {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 25px 5%;
+}
+
+.header-main a {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* ######## Menu Button ########### */
+/* icon upar, menu text neeche -> flex column */
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+}
+
+.menu-icon {
+    font-size: 35px;
+    line-height: 1;
+}
+
+/* ######### logo ########### */
+.logo img {
+    display: block;
+    height: 50px;
+}
+
+ /* ############ search box ########## */
+.search-form {
+    flex: 1;
+    display: flex;
+    background: #fff; 
+    align-items: center;
+    height: 45px;
+    padding: 0 20px; 
+    border-radius: 999px;
+ }
+
+ .search-form input {
+    flex: 1;
+    border: 0;
+    font-size: 17px;
+    outline: 0;
+    background: transparent;
+ }
+
+ .search-form button {
+    border: 0;
+    background: none;
+    font-weight: 600;
+    cursor: pointer;
+ }
+
+ /* ######## Sign in and Basket ######*/
+ .header-actions {
+    display: flex;
+    gap: 50px;
+ }
+
+
+ /* ######## sell to cex button ####### */
+.header-main .sell-btn {
+    padding: 12px 20px;
+    background: #fff;
+    color: #1a1a1a;
+    border-radius: 999px;
+    font-size: 16px;
+}
+
+
+/* ########### navigation links ##################*/
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 0;
+    padding: 0 5% 12px;
+    list-style: none;
+}
+
+.main-nav a {
+    color: #fff;
+    font-weight: 600;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ^^^^^^^^^^^^^^^^^^^ Sidebar CSS ^^^^^^^^^^^^^^^^^^^^^^ */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background: #fff;
+    width: 410px;
+    max-width: 90%;
+    height: 100%;
+    padding: 0 45px 60px;
+    border-radius: 0 45px 45px 0;
+    /* overflow-y: auto; content long hoga to scroll */
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.3s, visibility 0.3s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+/* menu click -> url pe #sidebar -> so open sidebar */
+.sidebar:target {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/* heading + close icon div (sidebar) */
+.sidebar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    flex-shrink: 0; /* heading + close icon = no scroll */
+}
+
+.sidebar nav {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.sidebar-top h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+/* menu -> close icon */
+.sidebar-top a {
+    font-size: 38px;
+    line-height: 1;
+    color: #1a1a1a;
+}
+
+/* Buy and Sell heading in menu sidebar */
+.sidebar h3 {
+    margin: 22px 0 4px;
+    font-size: 22px;
+}
+
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* text -> left, arrow -> right (menu sidebar) */
+.sidebar li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 0;
+    font-size: 18px;
+    color: #1a1a1a;
+}
+
+
+/* section ke beech wali line  */
+.sidebar section + section {
+    margin-top: 18px;
+    border-top: 1px solid #ccc;
+}
+
+/* dark overlay beside sidebar  */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.sidebar:target + .overlay {
+    display: block;
+}
+
+
+
+/*^^^^^^^^^^^^ header + sidebar mobile view  ^^^^^^^^^^*/
+@media(max-width: 800px) {
+    .header-main {
+        flex-wrap: wrap; 
+        gap: 16px;
+    }
+
+    .search-form {
+        order: 5;
+        flex-basis: 100%;
+    }
+
+    .header-main .sell-btn {
+        padding: 10px 18px;
+        font-size: 16px;
+    }
+
+    .main-nav ul {
+        justify-content: flex-start;
+        gap: 24px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

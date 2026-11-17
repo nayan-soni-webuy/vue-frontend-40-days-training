@@ -1,0 +1,99 @@
+   <header class="site-header">
+
+    <!-- main row - menu,logo search signin basket sell btn -->
+    <div class="header-main">
+        <!-- menu click pe open hoga, using css :target
+        day 6: replace this with btn + js -->
+        <a href="#sidebar" class="menu-btn" aria-label="Open menu">
+            <span class="menu-icon" aria-hidden="true">&#9776;</span> <!-- hamburger icon-->
+            <span>Menu</span>
+        </a>
+
+        <!-- website logo -->
+         <a href="#" class="logo">
+            <img src="https://uk.webuy.com/img/logo.svg" alt="CeX home">
+         </a>
+
+         <!-- search box -->
+          <form action="#" method="get" class="search-form" role="search">
+            <input type="search" name="q" placeholder="What do you want to buy?" aria-label="Search products">
+
+            <button type="submit" aria-label="Search">Search</button> <!-- later will add icon-->
+          </form>
+
+        <!-- sign in and basket -->
+         <div class="header-actions">
+            <a href="account.html">Sign in</a>
+            <a href="#">Basket</a>
+         </div>
+
+         <!-- sell to cex btn -->
+         <a href="#" class="sell-btn">Sell to CeX</a>
+    </div>
+
+    <!-- navigation links -->
+     <nav class="main-nav" aria-label="Main">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Gaming</a></li>
+            <li><a href="#">Phones</a></li>
+            <li><a href="#">Computing</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Film &amp; TV</a></li>
+            <li><a href="#">New Accessories</a></li>
+            <li><a href="#">Apparel</a></li>
+        </ul>
+     </nav>
+</header>
+
+<!-- ################## sidebar ################### -->
+<aside id="sidebar" class="sidebar" aria-label="Sidebar menu">
+
+    <!-- heading + close btn -->
+    <div class="sidebar-top">
+        <h2>Menu</h2>
+        <a href="#" aria-label="Close menu">&times;</a>
+    </div>
+
+    <!-- links will scroll -->
+    <nav aria-label="Sidebar">
+
+        <!-- Buy Section -->
+        <section>
+            <h3>Buy</h3>
+            <ul>
+                <li><a href="#">Gaming<span aria-hidden="true">&rsaquo;</span></a></li>
+                <li><a href="#">Phones<span aria-hidden="true">&rsaquo;</span></a></li>
+                <li><a href="#">Computing<span aria-hidden="true">&rsaquo;</span></a></li>
+                <li><a href="#">Electronics<span aria-hidden="true">&rsaquo;</span></a></li>
+                <li><a href="#">Film &amp; TV<span aria-hidden="true">&rsaquo;</span></a></li>
+                <li><a href="#">New Accessories<span aria-hidden="true">&rsaquo;</span></a></li>
+                <li><a href="#">Apparel<span aria-hidden="true">&rsaquo;</span></a></li>
+            </ul>
+        </section>
+
+        <!-- Sell Section -->
+        <section>
+            <h3>Sell</h3>
+            <ul>
+                <li><a href="#">Trade in your item</a></li>
+            </ul>
+        </section>
+
+        <!-- bottom links will show on scroll after careers -->
+         <section>
+            <ul>
+                <li><a href="#">Find a store</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Franchising</a></li>
+                <li><a href="#">Repairs</a></li>
+                <li><a href="#">About CeX</a></li>
+            </ul>
+         </section>
+    </nav>
+</aside>
+
+<a href="#" class="overlay" aria-label="Close menu"></a>
+
+

@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #1a1a1a;
+}
+
+/* main-container header aur footer ke beecha ka content  */
+.main-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 24px 5% 60px;
+}
+
+/* breadcrumb home > my Account */
+.breadcrumb ol {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* font-size: 18px; */
+    color: #555;
+}
+
+/* breadcrumb > arrow using css after one item  */
+.breadcrumb li + li::before {
+    content: ">";
+    margin-right: 5px;
+}
+
+.breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.breadcrumb [aria-current="page"] {
+    color: #1a1a1a;
+}
+
+/* two column content layout */
+ /* grid - first column sidebar {max 347px}, baki jagah right panel 1fr */
+ .account-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 300px) 1fr;
+    gap: 60px;
+    margin-top: 40px;
+ }
+
+
+
+
+
+/* left sidebar css  */
+.account-sidebar {
+    align-self: start;
+    border: 1px solid #e5e5e5;
+    border-radius: 30px;
+    padding-bottom: 24px;
+    overflow: hidden;
+}
+
+.sidebar-user {
+    padding: 20px 30px 20px;
+}
+
+/* Hi, username  */
+.sidebar-user h2 {
+    margin: 0 0 12px;
+    font-size: 25px;
+    /* font-weight: 600; */
+}
+
+/* account no.  */
+.sidebar-user p {
+    margin: 0;
+}
+
+/* ul list css  */
+.menu-group {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* groups ke beech me line banani h ab */
+.menu-group + .menu-group {
+    border-top: 1px solid #e5e5e5;
+}
+
+
+/* tab links css start  */
+.tab-link {
+    display: block;
+    width: 100%;
+    padding: 18px 30px;
+    border: 0;
+    background: none;
+    /* color: inherit; */
+    /* font-family: inherit; */
+    text-align: left;
+    font-size: 15px;
+    text-decoration: none; /*removes underline from logout tab*/
+    cursor: pointer;
+}
+
+/* tab btns hover krne pe aur current(active tab pe bg red and text white */
+.tab-link:hover,
+.tab-link[aria-current="true"] {
+    background: #E20A03;
+    color: #fff;
+}
+
+/* .tab-link:hover {
+    color: #e4141b;
+}
+.tab-link[aria-current="true"] {
+    background: #e4141b;
+    color: #fff;
+} */
+
+
+/* top icons wale link bold */
+.icon-links .tab-link {
+    display: flex; 
+    align-items: center;
+    gap: 12px;
+    padding: 14px 30px;
+    font-weight: 600;
+}
+
+
+/* for now icons are black box, will add svg later  */
+.icon {
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    width: 25px;
+    height: 25px;
+    background: #1a1a1a;
+}
+
+/* ^^^^^^^^^^^^^^^^^ Right panel(column) css ^^^^^^^^^^^^^^^^^^^^^^ */
+.tab-panel h1 {
+    margin: 0 0 30px;
+    font-size: 28px;
+    /* font-weight: 600; */
+}
+
+
+/* mobile view css */
+@media (max-width: 800px) {
+    .account-layout {
+        /* sidebar upar , content neeche  */
+        grid-template-columns: 1fr;
+        gap: 30px; 
+    }
+}
