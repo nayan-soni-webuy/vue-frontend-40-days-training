@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility functions</title>
+</head>
+<body>
+
+    <h1>Day 07 - Utility functions</h1>
+
+    <p>open develper console</p>
+
+
+    <!-- import/export will use on day 10, so used script tag -->
+     <script src="js/utils/validators.js"></script>
+
+
+     <script>
+        // ++++++++++ testing validator functions ++++++++++++
+        console.log('Email ok:', isValidEmail('nayan.soni@yahoo.com'));
+        console.log('Email !Ok:', isValidEmail('nayan@yahoo'));
+        console.log('password:', isValidPassword('Nayan1234'));
+        console.log('Name ok:', isValidName('OM'));
+        console.log('phone:', isValidPhone('8978675490'));
+        console.log('field error:', getFieldError('email', 'abc@'));
+
+
+        //++++++++++ testing Formatir funcs ++++++++++++
+     </script>
+    
+</body>
+</html>
