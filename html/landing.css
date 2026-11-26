@@ -1,0 +1,390 @@
+html {
+    scroll-behavior: smooth; /* page vertical scroll */
+}
+
+.landing {
+    background: #fafafa; /* light grey background home page */
+    padding-bottom: 60px;
+}
+
+.landing h2 {
+    margin: 0;
+    /* font-size: 32px; */
+    /* font-weight: 600; */
+}
+
+ /* ############# Vanner border par imag ########### */
+.banner {
+    padding: 10px;
+    /* border: 1px solid red; */
+    border-radius: 40px;
+    background: #fff url(https://uk.webuy.com/_nuxt/base-pattern.ClGTpUfx.svg) center / cover;
+}
+
+.banner-inner {
+    position: relative; /* arros or dots sike acc rahnege */
+    height: 260px;
+    border-radius: 30px;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* slides ik ke upar ik, jo hidden ni wo dikhegi */
+.slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide[hidden] {
+    display: none; /* display flex ne override kr dia tha isley diplay none*/
+}
+
+.slide h2 {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+/* slide ke colors img later add on krna h */
+.s-red { background: #c4151c; }
+.s-purple {background: linear-gradient(135deg, #5b21d6, #c026d3); }
+.s-cream { background: #ede6cd; }
+.s-orange { background: #ea6a2f; }
+.s-teal {background: #4a93a8; }
+.s-green { background: #4eb634; }
+
+ /* left / right arrows banner */
+.slide-prev, .slide-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 40px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* btns alignment */
+.slide-prev { 
+    left: 14px; 
+}
+.slide-next { 
+    right: 14px;
+}
+
+/* slider banner dots  */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+
+.dots button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 0;
+    background: #fff;
+    /* opacity: 0.6; */
+    cursor: pointer;
+}
+
+.dots button.active {
+    background: #1a1a1a;
+    /* opacity: 1; */
+}
+
+/* ######### hero section big banner or review card ############ */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    padding: 50px 5% 0;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #15163a;
+    text-align: center;
+}
+
+.review-card h2 {
+    /* font-size: 25px; */
+}
+
+
+
+/* ############# product sections ################ */
+ /* sirf left padding dena h, taki cards right side screeb k edge takk jayen,
+ isse 5 cards baad 6th aadha dikega */
+.product-section {
+    border: 1px solid green;
+    padding: 60px 0 0 5%;
+}
+
+.product-section h2 {
+    margin-bottom: 30px;
+}
+
+/* cards ik line me with side scroll, hide scrollbar  */
+.cards-row {
+    border: 1px solid blue;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.cards-row::-webkit-scrollbar {
+    display: none;
+}
+
+/* prev next btns - right side  */
+.row-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 30px 5% 0 0;
+}
+
+.row-buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* scroll khtm ho jaye to btn greyt */
+.row-buttons button:disabled {
+    background: #aaa;
+    cursor: default;
+}
+
+/* ############ product card  ############*/
+.card {
+    position: relative; /* waranty badge + hert isi ke andar*/
+    flex: 0 0 300px; /* widht fix, shrink ni hoga */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e8e8e8;
+    border-radius: 30px;
+    background: #fafafa;
+    overflow: hidden;
+}
+
+.card-img {
+    height: 240px;
+    background: #fff;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 5 year warranty badge, card ke top left me  */
+.badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 60px;
+}
+
+.heart {
+    position: absolute;
+    top: 24px;
+    right: 18px;
+    border: 0;
+    background: none;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* img ke baad ka content  */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px 20px 20px;
+}
+
+.rating {
+    align-self: flex-end;
+    color: #595454;
+    font-weight: bold;
+}
+
+.rating span {
+    color: #f5b301; /* yellow star */
+}
+
+.card-cat {
+    margin: 8px 0 4px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* name 3 line se zyada ho to ... lagana h  */
+.card-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* price left side, basket btn right side  */
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 16px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.basket-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #E20A03;
+    cursor: pointer;
+}
+
+.basket-btn:hover {
+    background: #b80f15;
+}
+
+.basket-btn svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* ############# discover more section ########### */
+.discover {
+    border: 1px solid pink;
+    margin: 60px 5% 0;
+    padding: 40px 20px;
+    border-radius: 40px;
+    background: #fff;
+    text-align: center;
+}
+
+.discover ul {
+    border: 1px solid yellow;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0 0;
+    padding: 0;
+    list-style: none;
+    font-weight: bold;
+}
+
+.discover li {
+    width: 160px;
+}
+
+ /* section discover li > div  */
+.tile {
+    border: 1px solid #ddd;
+    height: 120px;
+    margin-bottom: 18px;
+    border-radius: 25px;
+    background: #f4f4f4; /* div*/
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^ Promo banner ^^^^^^^^^^^^^^^^^^^^^^  */
+.promo {
+    padding: 50px 5% 0;
+}
+
+/* ################# Blog cards ################# */
+.blog-card {
+    border: 1px solid #eee;
+    flex: 0 0 300px;
+    overflow: hidden;
+    border-radius: 28px;
+    background: #fafafa;
+}
+
+.blog-card img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    /* object-fit: cover; */
+}
+
+/* img ke neeche wala content  */
+.blog-card div {
+    padding: 20px 20px 20px;
+}
+
+.blog-label {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: #555;
+}
+
+.blog-card h3 {
+    font-size: 16px;
+    /* font-weight: bold; */
+    margin: 0 0 8px;
+}
+
+.blog-date {
+    margin: 0;
+    color: #555;
+}
+
+/* ################## mobile view ################### */
+@media(max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .slide h2 {
+        font-size: 30px;
+    }
+
+    .card {
+        flex-basis: 240px;
+    }
+
+    .blog-card {
+        flex-basis: 280px;
+    }
+}
