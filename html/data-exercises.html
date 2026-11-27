@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-08 : data exercises</title>
+</head>
+
+<body>
+    <h1>Day 08 - Arrays & Objects</h1>
+
+    <p>resutls in console</p>
+
+    <script src="js/data/products.js"></script>
+    <script src="js/basket.js"></script>
+
+    <script>
+        fetchProducts().then((data) => {
+            // console.log(data);
+            console.log('-------- basket ------');
+            let basket = [];
+            basket = addToBasket(basket, products[0]); //Essence
+            basket = addToBasket(basket, products[0]); //Essence -> quantity 2
+            basket = addToBasket(basket, products[6]); // Calvin
+            basket = addToBasket(basket, products[7]);
+            console.log('After adding products into Basket:');
+            console.table(basket);
+
+            basket = removeFromBasket(basket, products[6].id);
+            console.log('After removing one product from basket: ');
+            console.table(basket);
+
+            
+
+        }).catch((error) => {
+            if (!navigator.onLine) {
+                console.error('Failed because of internet loss!!')
+                alert('Failed because of internet loss!!')
+            }
+            console.error('# Api response failed to load... #', error.message);
+        });
+
+    </script>
+</body>
+
+</html>
